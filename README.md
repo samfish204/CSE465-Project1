@@ -18,7 +18,7 @@ Your prolog file must obey the folowing format:
 5.  Your puzzle must have a sereis of `clueX(T)` rules that are satisfied whenever the solution in `T` is consistent with clue X.  
 6.  Your puzzle must include the `check` rule as follows:
 ```
-check :- (solution(S), solve(S), aggregate_all(count, (solve(_T)), Count), format("Found ~w solutions~n", [Count]), Count=1. 
+check :- solution(S), solve(S), aggregate_all(count, (solve(_T)), Count), format("Found ~w solutions~n", [Count]), Count=1. 
 ```
 
 
