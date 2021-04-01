@@ -39,6 +39,12 @@ which will use your `solve` and `solution` predicates to make sure you find exac
 You can, of course, work on your solution using  [SWISH](https://swish.swi-prolog.org/) in which case you may want to also use their [table rendering plugin](https://swish.swi-prolog.org/example/render_table.swinb) to display your solution.  Once you have a solution, however, you should confirm that it runs properly in the container. This may mean commenting out the part where you load the plugin. 
 
 ## Checking Your Solution
+You will not be able to solve the veryhard puzzle without optimizing your solution. 
+1.   Type `solution(S), solve(S)` to make sure you dont rule out the correct solution. This is always fast. 
+2.   Type `soltuion(S), solve(T), T\=S` to find your first incorrect solution. This is usually fast enough. 
+3.   Copy the incorrect soltuion from above and use     `T=<pasted from abov>, clueX(T)` to debug a clue.  
+
+When you think you have it, use
 
 ```
 make check
