@@ -16,11 +16,7 @@ Your prolog file must obey the folowing format:
 3.  Your prolog file must also provide a `solution/1` fact with the correct solution hardcoded in. You will get the correct solution from the [Printable Logic Puzzles](https://www.printable-puzzles.com/printable-logic-puzzles.php) website.
 4.  Your prolog file must provide a `solve/1` rule that uses the clues to find one, and only one, table that is the solution. 
 5.  Your puzzle must have a sereis of `clueX(T)` rules that are satisfied whenever the solution in `T` is consistent with clue X.  
-6.  Your puzzle must include the `check` rule as follows:
-```
-check :- solution(S), solve(S), aggregate_all(count, (solve(_T)), Count), format("Found ~w solutions~n", [Count]), Count=1. 
-```
-
+6.  Your puzzle must include the `check` rule, you should not modify this except if specifically suggested by the instructor. 
 
 To receive credit, your puzzle must find one, and only one, solution to the puzzle. 
 
