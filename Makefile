@@ -13,7 +13,7 @@ check-%: %.output
 update: update-http
 
 update-ssh:
-	git pull  git@gitlab.csi.miamioh.edu:CSE465/instructor/project1.git
+	git pull  git@gitlab.csi.miamioh.edu:CSE465/instructor/project1.git master
 	
 update-http:
-	git pull  https://gitlab.csi.miamioh.edu/CSE465/instructor/project1.git
+	git pull  https://gitlab.csi.miamioh.edu/CSE465/instructor/project1.git master
