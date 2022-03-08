@@ -20,7 +20,7 @@ check-challenging: challenging.output
 	diff challenging.output challenging.expected
 	@echo challenging - Success!
 
-update: update-http
+update: update-ssh
 
 update-ssh:
 	git pull  git@gitlab.csi.miamioh.edu:CSE465/instructor/project1.git master
