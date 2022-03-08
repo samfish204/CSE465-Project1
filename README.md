@@ -66,7 +66,9 @@ All of these MUST pass before you submit the assignment.
 
 ## Submitting your solution
 
-Submit a link to your fork of this repo to canvas. 
+Run `make submit` to dubmit to gitlab, and make sure it succeeded. 
+
+Then submit anything you can to canvas (e.g. the output of make submit)
 
 
 

@@ -6,7 +6,7 @@ check: check-challenging check-veryhard
 GOAL := "solution(S), solve(S), not((solve(T), T\=S)), writeln(\"Found 1 solutions\"); writeln(\"Too many solutions\")"
 
 %.output: %.pl 
-	swipl -q -g ${GOAL} -t halt  $*.pl 2>&1 > $*.output 
+	timeout 10m swipl -q -g ${GOAL} -t halt  $*.pl 2>&1 > $*.output 
 
 check-veryhard: veryhard.output
 # 	Verify that the  solution has 6 rows (veryhard)
@@ -27,3 +27,12 @@ update-ssh:
 	
 update-http:
 	git pull  https://gitlab.csi.miamioh.edu/CSE465/instructor/project1.git master
+
+
+submit: check submit-without-check
+
+submit-without-check:
+	git add -u 
+	git commit -m "Submission" || echo "** Nothing has changed"
+	git push origin master 
+	git log -1
